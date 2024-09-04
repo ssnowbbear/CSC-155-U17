@@ -1,2 +1,2 @@
 # CSC-155-U17
-This is my class notes &amp; assignments.
+These are my class notes &amp; assignments.
