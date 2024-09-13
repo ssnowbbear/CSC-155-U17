@@ -13,7 +13,7 @@
 
 # user_color = input("What is your favorite color? ")
 # user_color = user_color.lower().strip() # > .lower() allows for upper and lowercase letters in response. > .strip allows spaces in response
-# # # .upper() is the opposite of .lower() if given response is in uppercase
+# # .upper() is the opposite of .lower() if given response is in uppercase
 
 # # if (user_color == "red"):
 # #     print("Roses are red")
@@ -58,6 +58,6 @@ user_color = user_color.lower().strip()
 #if its red or yellow, it's a warm color, otherwise it's a cool color
 if (user_color == "red" or user_color == "yellow"):
     print(f"{user_color.capitalize()} is a warm color")
-elif (user_color == "grean" or user_color == "blue"):
+elif (user_color == "green" or user_color == "blue"):
     print(f"{user_color.capitalize()} is a cool color")
 else: # >Look at online code file to finish out notes

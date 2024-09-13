@@ -131,14 +131,23 @@ last = names.pop() # >'.pop' removes 'james'
 
 # >PROBLEM 2 (Sum of numbers from 0-100)
 
-for i in range(0,101):
-    print(i+i)
+# for i in range(0,101):
+    # print(i+i)
 
 # >PROBLEM 3 (Check if a list of numbers is sorted)
 
+num_list = [5, 9, 23, 17, 59]
+sorted_num = []
+for num in num_list:
+    sorted_num.append(num)
+    print(sorted_num)
 
-# >PROBLEM 4 (Make a copy of an array,
+
+
+# >PROBLEM 4 (Make a copy of an array(list),
 # modify your copy and see if original is affected)
+
+
 
 # >PROBLEM 5 (Program that will let me enter
 # how many friends, enter friends' names,
