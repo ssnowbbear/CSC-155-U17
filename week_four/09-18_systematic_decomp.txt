@@ -1,0 +1,65 @@
+1. Put water in
+    a. Prepare the cup.
+        i. 
+        ii. removing the lid
+    b. Fill with water  
+        i. turn on the faucet
+        ii. place the cup under the faucet
+        iii. 
+        .
+        .
+        .
+        
+>Problem:
+    Given a list of integers, find and print the duplicates
+
+Assume list is called list.
+Store duplicates in a list called 'duplicate.'
+
+1. Find and print the duplicates
+    A. Identify duplicates
+        i. sort first
+            list.sort()
+        ii. for each item, see if it matches the next
+            a. for item in list:
+                    if (item == next item):
+                    add item to list of duplicates
+
+            b. for idx in range(len(list) - 1):
+                    if (list[idx] == list[idx + 1]):
+                    duplicate.append(list[idx])
+
+    B. Print the duplicates
+        i. print(duplicate)
+    
+> # Be very specific when using python
+
+> Power Point Slides
+    -Problem Solving:
+        Start with problem statement:
+        Normally writen in english, sometimes ambiguous or incomplete.
+        -Where is "file" located? How big is it or how do I know when I've reached the end?
+        -How should final count be printed?
+        .
+        .
+        .
+
+>Conditional
+    >If condition is true, do Subtask 1;
+    else, do Subtask 2.
+
+>Iterative
+    Do Subtask over and over, as long as the test condition is true.
+
+>Problem Solving Skills
+    Learn to convert the problem statement into step by step description of subtasks
+
+    >Like a puzzle, or a 'word problem' from grammar school math.
+        >What is the starting state of the system?
+        >What is the desired ending state?
+        >How do we move from one state to another?
+    >Recognize English words that correlate to three basic constructs:
+        >'do A THEN do b' -sequential
+        >'IF G, then do H' -conditional
+        >'FOR EACH X, do Y -iterative
+        >do Z UNTIL W -iterative 
