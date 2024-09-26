@@ -4,7 +4,7 @@
 #     resp = ""
 #     while (resp != 'r' and resp != 'p' and resp !='s'):
 #         resp = input('Enter r for rock, p for paper, s for scissors: ')
-# #clean and transform
+# # clean and transform
 #     resp = resp.strip().lower()
 
 # # kill the game if they didnt enter r, p, or s
