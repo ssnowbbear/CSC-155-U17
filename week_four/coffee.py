@@ -25,9 +25,13 @@ user_bags = coffee_and_bags[1]
 
 if user_coffee not in avail_coffees.keys():
     print('Your response was invalid, sorry for the inconvenience.')
+    exit()
 
-elif not user_bags #still not done, im over this:
-    raise ValueError("Quantity was not specified, have a nice day") 
+if not user_bags.isdigit():
+    print('Quantity not specified, have a nice day.')
+    exit()
+    
+user_bags = int(user_bags)
 
 discount = 1
 
