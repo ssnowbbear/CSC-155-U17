@@ -8,7 +8,7 @@ avail_coffees = {
     'House Blend': 4.95,
     }
 
-print('Available coffees:')
+print('Available Coffees:')
 for coffee, price in avail_coffees.items():
     print(f'{coffee}: ${price:.2f}, ', end='')
 
@@ -19,10 +19,15 @@ coffee_and_bags = user_inputs.split()
 coffee_and_bags[0] = coffee_and_bags[0].lower().strip()
 
 user_coffee = coffee_and_bags[0]
+ 
 user_coffee = user_coffee.capitalize().strip()
 
 user_bags = coffee_and_bags[1]
 
+if coffee_and_bags[1] == str(list):
+    user_coffee = coffee_and_bags[0]+" "+coffee_and_bags[1]
+    user_bags = coffee_and_bags[2]
+    
 if user_coffee not in avail_coffees.keys():
     print('Your response was invalid, sorry for the inconvenience.')
     exit()
