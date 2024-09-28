@@ -53,7 +53,7 @@ print(f'Total Guesses: {sum(guesses)}') #total guesses
 print(f'Total Games: {len(guesses)}') #games count
 print(f'Average Number of Guesses: {int((sum(guesses))/(len(guesses)))}') #average of guesses
 
-print("\n\n\nThank you for playing!")        
+print("\nThank you for playing!")        
     
             
             
