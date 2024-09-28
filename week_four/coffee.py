@@ -10,10 +10,16 @@ avail_coffees = {
 
 print('Available Coffees:')
 
-for coffee, price in avail_coffees.items():
-    print(f'{coffee}: ${price:.2f}, ', end='')
+loop_count = 0
 
-user_inputs = input('what kind of coffee and how many bags would you like? ')
+for coffee, price in avail_coffees.items():
+    if loop_count == len(avail_coffees.items())-1:
+        print(f'{coffee}: ${price:.2f} ',)
+        break  
+    print(f'{coffee}: ${price:.2f}, ', end='')
+    loop_count += 1
+
+user_inputs = input('What kind of coffee and how many bags would you like? ')
 
 coffee_and_bags = user_inputs.split()
 
