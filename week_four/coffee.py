@@ -1,4 +1,4 @@
-# > ------------------ CHECK D2L, HAD TO HEAD HOME -------------------------------
+#-----------------------COFFEE LAB------------------------
 
 avail_coffees = {
     'Espresso': 5.25, 
@@ -63,16 +63,4 @@ for coffee, price in avail_coffees.items():
             print(f'Discount: %{(1-discount)*100:.2f}')
             
         print(f'\nTotal: ${price*user_bags*discount:.2f}') 
-        break      
-
-
-
-
-
-# order_again = input("Will that be all for you today? ")
-# order_again = order_again.lower().strip()
-
-# if (order_again == "yes"):
-#     print("Have a good day! Please come again")
-# else:
-#     print("What else can I help you with?")
+        break
