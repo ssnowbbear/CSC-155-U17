@@ -9,6 +9,7 @@ avail_coffees = {
     }
 
 print('Available Coffees:')
+
 for coffee, price in avail_coffees.items():
     print(f'{coffee}: ${price:.2f}, ', end='')
 
@@ -16,17 +17,16 @@ user_inputs = input('what kind of coffee and how many bags would you like? ')
 
 coffee_and_bags = user_inputs.split()
 
-coffee_and_bags[0] = coffee_and_bags[0].lower().strip()
-
-user_coffee = coffee_and_bags[0]
- 
-user_coffee = user_coffee.capitalize().strip()
-
-user_bags = coffee_and_bags[1]
-
-if coffee_and_bags[1] == str(list):
-    user_coffee = coffee_and_bags[0]+" "+coffee_and_bags[1]
+if len(coffee_and_bags) == 3:
+    user_coffee = coffee_and_bags[0].lower()+" "+coffee_and_bags[1].lower()
+    user_coffee = user_coffee.title().strip()
     user_bags = coffee_and_bags[2]
+else:
+    user_coffee = coffee_and_bags[0].lower().strip()
+    user_coffee = user_coffee.capitalize()
+    user_bags = coffee_and_bags[1]
+
+
     
 if user_coffee not in avail_coffees.keys():
     print('Your response was invalid, sorry for the inconvenience.')
@@ -62,7 +62,8 @@ for coffee, price in avail_coffees.items():
             print(f'\nSavings: ${(price*user_bags)-(price*user_bags*discount):.2f}')
             print(f'Discount: %{(1-discount)*100:.2f}')
             
-        print(f'\nTotal: ${price*user_bags*discount:.2f}')       
+        print(f'\nTotal: ${price*user_bags*discount:.2f}') 
+        break      
 
 
 
