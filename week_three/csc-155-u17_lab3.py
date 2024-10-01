@@ -1,10 +1,11 @@
 # >Problem 1
 
 user_name = input("What is your name? ")
+user_name = user_name.strip().title()
 
 if(user_name == "Bob"):
     print("Good morning Bob")
-elif(user_name == "Alice"):
+if(user_name == "Alice"):
     print("Hello, Alice")
 else:
     print("Go away.")
@@ -39,6 +40,8 @@ for i in range(num_rolls):
     dice1 = random.randint(1,6)
     dice2 = random.randint(1,6)
     if dice1 == 5  or dice2 == 5:
+        num_of_5 += 1
+    if dice1 + dice2 == 5:
         num_of_5 += 1
 
 print(f'Times 5 rolled: {num_of_5}')
