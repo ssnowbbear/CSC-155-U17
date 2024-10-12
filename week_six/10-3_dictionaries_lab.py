@@ -67,4 +67,12 @@ while keep_adding != "0":
             numbers[num] += 1
 
     keep_adding = input("Type a number and I will keep track of how many times it has appeared, enter 0 to end: ")
-print(numbers)
+print(f"These are the numbers you entered: {numbers}")
+
+common_count = max(numbers.values()) #accesses the count of each number
+
+common_nums = [num for num, count in numbers.items() if count == common_count] #sets variable for the common numbers
+
+print("This(these) was(were) the number(s) you entered the most:")
+for num in common_nums:
+    print(f"Most common number: {num}, Times appeared: {common_count}") #prints the numbers that appeared most commonly and the count
