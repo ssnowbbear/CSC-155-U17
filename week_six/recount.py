@@ -1,10 +1,19 @@
 import os
+from random import randint
+
+def file_name_randomizer():
+    file_picker = randint(0,1)
+
+    return "votes1.txt" if file_picker else "votes2.txt"
+
 votes = []
 vote_dict = {}
 
 cwd = os.getcwd() + "/week_six/"
 
-f = open(cwd + "votes2.txt", "r")
+#both files are stored in this directory
+#under votes1.txt & votes2.txt
+f = open(cwd + file_name_randomizer(), "r")
 
 input = "It's 1:35 AM"
 while input != "***" and len(votes) < 100_000:
