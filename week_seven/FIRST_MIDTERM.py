@@ -42,13 +42,40 @@
 
 # > 3 Function that is passed in a list of points (tuples) and returns the average distance between the points
 
-import math
+# def dmg_roll(num_dice:int, num_sides = 4)->int:
 
-def avg_dist(points: set[tuple[int,int]]) -> float:
+test1 = [(0,0), (0,1), (0,2)]
 
-    distance = math.sqrt(((x1-x2)**2) + ((y1-y2)**2))
+xs = [(0,0), (10,0), (0,10), (10,10)]
 
-    points = [(0,0), (0,1), (0,2)]
+def get_dist(x1:float, x2:float, y1:float, y2:float) -> float:
+    """
+    Finds distance 
+    between two points
+    """
+    dist = ((x2 - x1)**2 + (y2 - y1)**2)**0.5
+    return dist
 
 
-    xs = [(0,0), (10,0), (0,10), (10,10)]
+def avg_dist(points:list) -> float:
+    """
+    Finds the average distance between 
+    points in a list of tuples
+    """
+    total_dist = 0
+    if_state_count = 0
+
+    for i in range(len(points)):
+        point = points[i]
+        x1 = point[0]
+        y1 = point[1]
+        for j in range(len(points)):
+            if j > i:
+                point2 = points[j]
+                x2 = point2[0]
+                y2 = point2[1]
+                total_dist += get_dist(x1, x2, y1, y2)
+                if_state_count += 1
+    return total_dist/if_state_count
+
+print(avg_dist(xs))

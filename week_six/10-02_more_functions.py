@@ -51,4 +51,8 @@ def dmg_roll(num_dice:int, num_sides = 4)->int:
     total = 0
     for i in range(num_dice):
         total += dice_roll(num_sides)
+
+    print("hello")
     return total
+
+(dmg_roll(4))
