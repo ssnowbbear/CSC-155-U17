@@ -1,4 +1,5 @@
-# getting input for a kattis submission import sys
+# getting input for a kattis submission 
+import sys
 
 for line in sys.stdin:
     #each line is a string, same as using input()
