@@ -23,4 +23,3 @@ with open('week_ten/info2.txt','w') as file:
     file.write('Hello this is a test')
     file.write('\nFile IO') #will completely write over the file if there is anything
     #in the file before the 'write' function
-
