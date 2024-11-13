@@ -22,9 +22,18 @@
 
 # > Writing Files with Open
 
-# with open('week_ten/textFile3.txt','w') as file:
+# with open('week_ten/textFile3.txt','w') as file: # 'w' means you intend to write in the file
 #     file.write('Hello this is a test\n')
 #     file.write('File 3 IO!')
 
-with open('twocities.txt', encoding = 'utf-8') as f:
-    print('t')
+# > 1 - Total number of words in text file
+with open('week_ten/twocities_lab.txt', 'r', encoding = 'utf-8') as f:
+    word_count = 0
+    for sentence in f:
+        line = sentence.rstrip()
+        words = line.split()
+        # print(words) # make sure words were separated
+        word_count += len(words)
+print(word_count)
+
+# > 2 - Total number of distinct words in text file
