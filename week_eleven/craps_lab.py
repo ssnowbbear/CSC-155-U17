@@ -22,4 +22,25 @@ from random import randint
 
 dice1 = randint(1,6)
 dice2 = randint(1,6)
+sum_of_dice = dice1 + dice2
 
+if sum_of_dice == 7:
+    print("You Win!")
+elif sum_of_dice == 11:
+    print("You Win!")
+elif sum_of_dice == 2:
+    print("You Lose!")
+elif sum_of_dice == 3:
+    print("You Lose!")
+elif sum_of_dice == 12:
+    print("You Lose!")
+
+#for after first roll
+point = 0
+first_roll_nums = [2, 3, 7, 11, 12]
+if sum_of_dice not in first_roll_nums:
+    point = sum_of_dice
+    print(f"Point: {point}")
+    
+    
+print(f"First dice: {dice1} \nSecond dice: {dice2} \nYou rolled: {sum_of_dice}")
